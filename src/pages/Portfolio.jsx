@@ -1,49 +1,56 @@
-// import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import proj1 from "../assets/images/proj9.png";
-import proj2 from "../assets/images/proj11.png";
-import proj3 from "../assets/images/proj12.png";
+import proj1 from "../assets/images/p1.png";
+import proj2 from "../assets/images/p2.png";
+import proj3 from "../assets/images/p3.png";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiChevronDown } from "react-icons/fi";
 
-
 const projects = [
   {
-    title: "Ecommerce Digital Products",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "MongoDB, Express, React, Node.js",
-    link: "#",
-    git: "#",
+    title: "Interactive Matrimony Website",
+    desc: "BlissBonds is a full-stack matrimonial website developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides users with a seamless platform to find their perfect match, interact with premium members, share success stories, and manage their profiles efficiently.",
+    name: "BlissBonds",
+    devstack: "MongoDB, Express, React JS, Node.JS, Firebase, Tailwind CSS, Material Tailwind",
+    link: "https://bliss-bonds.web.app/",
+    git: "https://github.com/Khalid9080/BlissBonds.git",
     src: proj1,
     type: "fullstack",
   },
   {
-    title: "Interactive E-Learning Platform",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "NextJs",
-    link: "#",
-    git: "#",
+    title: "Dynamic Lost and Found System",
+    desc: "WhereItIs is a platform designed to help you easily find lost items and reconnect with your belongings. Whether you've misplaced something small or lost a precious item, the goal is to make the process of finding what matters to you simpler and more effective.",
+    name: "WhereIsIt",
+    devstack: "MongoDB, React Js, Node.js, Firebase,Tailwind CSS, Daisy UI",
+    link: "https://whereisit-697aa.web.app/",
+    git: "https://github.com/Khalid9080/WhereIsIt.git",
     src: proj2,
     type: "frontend",
   },
   {
-    title: "Portfolio Website",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    devstack: "React, Tailwind",
-    link: "#",
-    git: "#",
+    title: "Interactive E-Learning Platform",
+    desc: "GadgetHeaven is an online eCommerce platform where users can purchase a wide range of digital accessories, including watches, power banks, mobile devices, laptops, chargers, PCs, and more.",
+    name: "GadgetHeaven",
+    devstack: "React JS, Tailwind CSS, Javascript, HTML5, Vanilla CSS, Local Storage",
+    link: "https://khalid-gadget-heaven.netlify.app/",
+    git: "https://github.com/Khalid9080/Gadget-Heaven.git",
     src: proj3,
     type: "frontend",
   },
 ];
 
 export const Portfolio = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedIndexes, setExpandedIndexes] = useState(
+    projects.map((_, index) => index) // Open all projects by default
+  );
 
   const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+    setExpandedIndexes((prevIndexes) =>
+      prevIndexes.includes(index)
+        ? prevIndexes.filter((i) => i !== index)
+        : [...prevIndexes, index]
+    );
   };
 
   return (
@@ -72,23 +79,23 @@ export const Portfolio = () => {
                   <span className="text-3xl font-light text-emerald-300">
                     0{index + 1}
                   </span>
-                  <FiChevronDown 
+                  <FiChevronDown
                     className={`w-6 h-6 transform transition-transform ${
-                      expandedIndex === index ? "rotate-180" : ""
+                      expandedIndexes.includes(index) ? "rotate-180" : ""
                     }`}
                   />
                 </div>
               </div>
               <AnimatePresence>
-                {expandedIndex === index && (
+                {expandedIndexes.includes(index) && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-6 pb-6  bg-black/20 border border-white/10"
+                    className="px-6 pb-6 bg-black/20 border border-white/10"
                   >
-                    <div className="flex flex-col md:flex-row gap-8">
+                    <div className="flex flex-col md:flex-row gap-8 mt-6">
                       <img
                         src={project.src}
                         alt={project.title}
@@ -96,6 +103,9 @@ export const Portfolio = () => {
                       />
                       <div className="flex-1">
                         <p className="text-white/70 mb-4">{project.desc}</p>
+                        <p className="text-white/80 font-semibold mb-2">
+                          Name: {project.name}
+                        </p>
                         <p className="text-emerald-300 font-medium mb-2">
                           Stack: {project.devstack}
                         </p>
@@ -106,12 +116,14 @@ export const Portfolio = () => {
                           <a
                             href={project.link}
                             className="text-emerald-400 hover:text-blue-300 transition-colors"
+                            target="_blank" rel="noopener noreferrer"
                           >
                             <HiOutlineExternalLink />
                           </a>
                           <a
                             href={project.git}
                             className="text-gray-400 hover:text-gray-300 transition-colors"
+                            target="_blank" rel="noopener noreferrer"
                           >
                             <FaGithub />
                           </a>

@@ -51,21 +51,22 @@ export const Hero = () => {
               >
                 <div>
                   <a href="https://drive.google.com/file/d/1U9k9PXYvWk6DBczNdsF8kbohhlJsTfZi/view?usp=sharing" download>
-                  Download CV 
-                </a>
+                    Download CV
+                  </a>
                 </div>
                 <div>
-                <FaDownload />
+                  <FaDownload />
                 </div>
-                
+
 
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 border border-white/20 rounded-full font-medium hover:bg-white/10 transition-colors"
               >
-                View Work
+                <a href="#portfolio">View Work</a> {/* Add anchor link */}
               </motion.button>
+
             </div>
           </motion.div>
         </div>

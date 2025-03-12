@@ -2,7 +2,7 @@
 
 const Education = () => {
   return (
-    <section id="education" className="text-white p-8 flex justify-center mt-20">
+    <section id="education" className="text-white p-8 flex justify-center mt-52">
       <div className="w-full max-w-7xl">
         <h2 className="text-6xl font-bold mb-12 text-center">
           My <span className="text-emerald-300">Education</span>

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { PiArrowUpRightBold } from "react-icons/pi";
 
 const navLinks = [
   { title: "About", path: "#about" },
-  { title: "Portfolio", path: "#portfolio" },
+  { title: "Projects", path: "#portfolio" },
   { title: "Stack", path: "#stack" },
   { title: "Contact", path: "#contact" },
 ];
@@ -39,6 +40,26 @@ export const Navbar = () => {
           ))}
         </ul>
       </div>
+
+      {/* Hire Me Button (Added Here) */}
+      <a
+        href="#contact"
+        className="hidden md:block absolute right-10 top-5 px-6 py-3 border border-white/20 rounded-full font-medium hover:bg-white/10 
+        
+        transform hover:skew-x-12 hover:text-white
+                                                                transition-all duration-300 ease-in-out bg-emerald-300"
+      >
+        <div className="flex items-center space-x-2 hover:text-emerald-300 text-black">
+          <div>
+        Hire Me
+        </div>
+        <div>
+          <PiArrowUpRightBold />
+        </div>
+        </div>
+        
+        
+      </a>
 
       <div
         onClick={toggleNav}

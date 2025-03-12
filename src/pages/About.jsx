@@ -17,9 +17,9 @@ export const About = () => {
         <div className="border border-white/20 rounded-lg p-8 bg-white/5 shadow-lg mx-auto text-center">
           <h3 className="text-3xl font-bold mb-6 text-emerald-300">Who Am I?</h3>
           <p className="text-white/70 text-lg leading-relaxed text-justify">
-            I'm <span className="text-emerald-300 font-semibold">Khalid Saifullah</span>, a 
+            I&#39;m <span className="text-emerald-300 font-semibold">Khalid Saifullah</span>, a 
             passionate <span className="text-emerald-300 font-semibold">MERN Stack Developer</span> with a deep enthusiasm for problem-solving and technology. 
-            I hold a Bachelor's degree in <span className="text-emerald-300 font-semibold">Computer Science & Engineering</span> from 
+            I hold a Bachelor&apos;s degree in <span className="text-emerald-300 font-semibold">Computer Science & Engineering</span> from 
             American International University-Bangladesh (AIUB), where I honed my expertise in 
             software development, testing, and building robust applications.
           </p>

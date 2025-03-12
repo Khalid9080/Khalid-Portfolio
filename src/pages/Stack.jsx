@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { SiFramer, SiFigma, SiReact, SiNodedotjs } from "react-icons/si";
-import { FaLemon } from "react-icons/fa";
+import { SiFramer, SiFigma, SiReact, SiNodedotjs, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiHtml5, SiJson, SiDaisyui, SiMaterialdesign, SiGit } from "react-icons/si";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -31,8 +30,56 @@ const stackItems = [
   },
   {
     id: 5,
-    name: "Lemon Squeezy",
-    icon: <FaLemon size={100} />,
+    name: "MongoDB",
+    icon: <SiMongodb size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 6,
+    name: "Express JS",
+    icon: <SiExpress size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 7,
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 8,
+    name: "Javascript",
+    icon: <SiJavascript size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 10,
+    name: "HTML5",
+    icon: <SiHtml5 size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 11,
+    name: "JSON",
+    icon: <SiJson size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 12,
+    name: "Daizy UI",
+    icon: <SiDaisyui size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 13,
+    name: "Material Tailwind",
+    icon: <SiMaterialdesign size={100} />,
+    color: "text-emerald-200",
+  },
+  {
+    id: 14,
+    name: "GitBash",
+    icon: <SiGit size={100} />,
     color: "text-emerald-200",
   },
 ];
@@ -54,10 +101,10 @@ export const Stack = () => {
 
   return (
     <section
-      className="py-24 md:py-64 max-w-[1200px] mx-auto text-center"
+      className="max-w-[1200px] mx-auto text-center"
       id="stack"
     >
-      <h2 className="text-7xl text-gray-100 font-bold mb-20">My Stack</h2>
+      <h2 className="text-7xl text-gray-100 font-bold mb-20"> My <span className="text-emerald-300">Stack</span></h2>
       <div className="flex flex-wrap justify-center gap-8" ref={ref}>
         {stackItems.map((item, index) => (
           <motion.div

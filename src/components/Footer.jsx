@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -9,7 +9,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="py-8" id="contact">
+    <footer className="py-8 mt-80" id="contact">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex items-center justify-between flex-col md:flex-row">
           <div>
@@ -60,7 +60,7 @@ export const Footer = () => {
 
         <div className="relative z-10 text-center mt-8 py-12">
           <h1 className="hidden md:block text-[10rem] md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
-            KHALID
+            SAIFULLAH
           </h1>
 
           <h1 className="md:hidden relative text-9xl md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
