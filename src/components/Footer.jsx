@@ -17,11 +17,21 @@ export const Footer = () => {
               Get in <span className="text-gray-400">touch</span>
             </h2>
             <a
-              className="md:text-7xl text-4xl font-semibold text-white underline decoration-gray-400 decoration-2
-                                    underline-offset-4 hover:decoration-gray-200 transition duration-300"
+              className="lg:text-5xl md:text-2xl text-xl font-semibold text-white underline decoration-gray-400 decoration-2
+                        underline-offset-4 hover:decoration-gray-200 transition duration-300"
               href="mailto:john@doe.com"
             >
-              john@doe.com
+              Khalidsaifullah9080@gmail.com
+            </a>
+            <br />
+            <br />
+            <br />
+            <a
+              className="lg:text-5xl md:text-2xl text-xl font-semibold text-white underline decoration-gray-400 decoration-2
+                        underline-offset-4 hover:decoration-gray-200 transition duration-300"
+              href="mailto:20-44024-2@student.aiub.edu"
+            >
+              20-44024-2@student.aiub.edu
             </a>
           </div>
 
@@ -29,32 +39,34 @@ export const Footer = () => {
             <div className="mb-8">
               <p className="text-lg mb-1">Phone</p>
               <a
-                href="+990788979999"
+                href="tel:+8801710254043"
                 className="text-2xl font-semibold underline decoration-gray-400 decoration-2
-                                    underline-offset-4 hover:decoration-gray-400 transition duration-300"
+                        underline-offset-4 hover:decoration-gray-400 transition duration-300"
               >
-                +99 (0) 78 897 9999
+                +880 1710254043
               </a>
             </div>
 
             <div className="text-lg mb-8">
-              <p className="font-bold">Office</p>
-              <p>Street 98 98987</p>
-              <p>Berlin</p>
-              <p>Germany</p>
+              <p className="font-bold">Home</p>
+              <p>Street 09 </p>
+              <p>Block F</p>
+              <p>Bashundhara R/A</p>
+              <p>Dhaka, Bangladesh</p>
             </div>
           </div>
         </div>
 
+
         <div className="relative z-10 text-center mt-8 py-12">
           <h1 className="hidden md:block text-[10rem] md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
-            JOHNDOE
+            KHALID
           </h1>
 
           <h1 className="md:hidden relative text-9xl md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
-            JOHN
+            KHAL
             <br />
-            DOE
+            ID
           </h1>
         </div>
 
